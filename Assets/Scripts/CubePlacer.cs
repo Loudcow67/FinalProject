@@ -9,7 +9,7 @@ public static class CubePlacer
     {
         Transform newTransform = GameObject.Instantiate(transform, position, Quaternion.identity);
 
-        newTransform.transform.position = position + new Vector3(0f, 1f, 0f);
+        newTransform.transform.position = position + new Vector3(0f, 0.5f, 0f);
 
         if (objects == null)
         {
@@ -22,7 +22,7 @@ public static class CubePlacer
     {
         for (int i = 0; i < objects.Count; i++)
         {
-            if (objects[i].position == position)
+            if (objects[i].position == position + new Vector3(0f,0.5f,0f))
             {
                 GameObject.Destroy(objects[i].gameObject);
                 objects.RemoveAt(i);
