@@ -20,8 +20,11 @@ public class ObjectPlacer : MonoBehaviour
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out HitInfo, Mathf.Infinity))
             {
-                ICommand command = new PlaceObjectCommand(HitInfo.point, Cube);
-                CommandInvoker.AddCommand(command);
+                if (HitInfo.collider.gameObject.tag == "Ground")
+                {
+                    ICommand command = new PlaceObjectCommand(HitInfo.point, Cube);
+                    CommandInvoker.AddCommand(command);
+                }
             }
         }
     }

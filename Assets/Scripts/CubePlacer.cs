@@ -9,6 +9,8 @@ public static class CubePlacer
     {
         Transform newTransform = GameObject.Instantiate(transform, position, Quaternion.identity);
 
+        newTransform.transform.position = position + new Vector3(0f, 1f, 0f);
+
         if (objects == null)
         {
             objects = new List<Transform>();
