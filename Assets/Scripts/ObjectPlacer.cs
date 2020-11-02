@@ -24,6 +24,7 @@ public class ObjectPlacer : MonoBehaviour
                 {
                     ICommand command = new PlaceObjectCommand(HitInfo.point, Cube);
                     CommandInvoker.AddCommand(command);
+                    FindObjectOfType<AudioManager>().Play("Place");
                 }
             }
         }
