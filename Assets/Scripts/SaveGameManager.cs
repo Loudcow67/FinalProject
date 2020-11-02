@@ -59,12 +59,6 @@ public class SaveGameManager : MonoBehaviour
                 case "Cube":
                     tmp = Instantiate(Resources.Load("Cube") as GameObject);
                     break;
-                case "Cylinder":
-                    tmp = Instantiate(Resources.Load("Cylinder") as GameObject);
-                    break;
-                case "Sphere":
-                    tmp = Instantiate(Resources.Load("Sphere") as GameObject);
-                    break;
             }
             if (tmp != null)
             {
