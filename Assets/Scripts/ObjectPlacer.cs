@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectPlacer : MonoBehaviour
 {
@@ -8,9 +9,12 @@ public class ObjectPlacer : MonoBehaviour
     RaycastHit HitInfo;
     public Transform Cube;
 
+    GameObject toggle;
+
     private void Awake()
     {
         cam = Camera.main;
+        toggle = GameObject.Find("Toggle (1)");
     }
 
     private void Update()
@@ -25,6 +29,7 @@ public class ObjectPlacer : MonoBehaviour
                     ICommand command = new PlaceObjectCommand(HitInfo.point, Cube);
                     CommandInvoker.AddCommand(command);
                     FindObjectOfType<AudioManager>().Play("Place");
+                    toggle.GetComponent<Toggle>().isOn = true;
                 }
             }
         }

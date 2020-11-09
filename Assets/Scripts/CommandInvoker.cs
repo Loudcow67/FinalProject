@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CommandInvoker : MonoBehaviour
 {
     static Queue<ICommand> commandBuff;
@@ -9,10 +9,15 @@ public class CommandInvoker : MonoBehaviour
     static List<ICommand> commandHis;
     static int counter;
 
+    GameObject toggle1;
+    GameObject toggle2;
+
     private void Awake()
     {
         commandBuff = new Queue<ICommand>();
         commandHis = new List<ICommand>();
+        toggle1 = GameObject.Find("Toggle (2)");
+        toggle2 = GameObject.Find("Toggle (3)");
     }
 
     public static void AddCommand(ICommand command)
@@ -48,6 +53,7 @@ public class CommandInvoker : MonoBehaviour
                 {
                     counter--;
                     commandHis[counter].Undo();
+                    toggle1.GetComponent<Toggle>().isOn = true;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.R))
@@ -56,6 +62,7 @@ public class CommandInvoker : MonoBehaviour
                 {
                     commandHis[counter].Execute();
                     counter++;
+                    toggle2.GetComponent<Toggle>().isOn = true;
                 }
             }
         }

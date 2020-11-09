@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-enum ObjectType { Cube, Player }
+enum ObjectType { Cube }
 
 public abstract class SaveableObject : MonoBehaviour
 {
