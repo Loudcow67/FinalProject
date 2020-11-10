@@ -46,8 +46,9 @@ public class CommandInvoker : MonoBehaviour
 
             commandHis.Add(x);
             counter++;
+            cubeCounter--;
             Debug.Log("Length: " + commandHis.Count);
-            blockCounter.text = "x" + (cubeCounter - commandHis.Count).ToString();
+            blockCounter.text = "x" + (cubeCounter).ToString();
         }
         else
         {
@@ -56,8 +57,10 @@ public class CommandInvoker : MonoBehaviour
                 if (counter > 0)
                 {
                     counter--;
+                    cubeCounter++;
                     commandHis[counter].Undo();
                     toggle1.GetComponent<Toggle>().isOn = true;
+                    blockCounter.text = "x" + (cubeCounter).ToString();
                 }
             }
             else if (Input.GetKeyDown(KeyCode.R))
