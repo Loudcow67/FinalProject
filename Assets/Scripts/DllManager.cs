@@ -76,24 +76,10 @@ public class DllManager : MonoBehaviour
             SaveTime(checkpointTime);
             Debug.Log(LoadTime(0));
             timerText.text = "Current Time: " + LoadTotalTime().ToString();
-            //toggle4.GetComponent<Toggle>().isOn = true;
-            //counter++;
-            //Debug.Log(counter);
-            //if (counter == 2)
-            //{
-            //    toggle5.GetComponent<Toggle>().isOn = true;
-            //}
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
             toggle4.GetComponent<Toggle>().isOn = true;
             counter++;
             Debug.Log(counter);
-            if (counter == 2)
+            if (counter >= 2)
             {
                 toggle5.GetComponent<Toggle>().isOn = true;
             }
