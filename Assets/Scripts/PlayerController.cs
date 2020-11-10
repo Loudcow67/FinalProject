@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity;
 
     bool isGrounded;
+
+    GameObject toggle1;
+
+    private void Start()
+    {
+        toggle1 = GameObject.Find("Toggle");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -42,5 +50,10 @@ public class PlayerController : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            toggle1.GetComponent<Toggle>().isOn = true;
+        }
     }
 }

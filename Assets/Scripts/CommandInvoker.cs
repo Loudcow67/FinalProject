@@ -12,6 +12,9 @@ public class CommandInvoker : MonoBehaviour
     GameObject toggle1;
     GameObject toggle2;
 
+    public Text blockCounter;
+    static int cubeCounter = 4;
+
     private void Awake()
     {
         commandBuff = new Queue<ICommand>();
@@ -44,6 +47,7 @@ public class CommandInvoker : MonoBehaviour
             commandHis.Add(x);
             counter++;
             Debug.Log("Length: " + commandHis.Count);
+            blockCounter.text = "x" + (cubeCounter - commandHis.Count).ToString();
         }
         else
         {

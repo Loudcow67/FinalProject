@@ -55,6 +55,8 @@ public class DllManager : MonoBehaviour
 
     GameObject toggle4;
     GameObject toggle5;
+
+    static int counter;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,11 +66,16 @@ public class DllManager : MonoBehaviour
     }
 
     public Text timerText;
-    private int counter;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            toggle4.GetComponent<Toggle>().isOn = true;
+            counter++;
+            if (counter >= 2)
+            {
+                toggle5.GetComponent<Toggle>().isOn = true;
+            }
             float currentTime = Time.time;
             float checkpointTime = currentTime - lastTime;
             lastTime = currentTime;
@@ -76,13 +83,6 @@ public class DllManager : MonoBehaviour
             SaveTime(checkpointTime);
             Debug.Log(LoadTime(0));
             timerText.text = "Current Time: " + LoadTotalTime().ToString();
-            toggle4.GetComponent<Toggle>().isOn = true;
-            counter++;
-            Debug.Log(counter);
-            if (counter >= 2)
-            {
-                toggle5.GetComponent<Toggle>().isOn = true;
-            }
         }
     }
 

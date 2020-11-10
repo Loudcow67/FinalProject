@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 709, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 107
+  controlID: 18
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 113
+  controlID: 121
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 81
+  controlID: 62
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -426,23 +426,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 68320000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 60fbffff
+      m_ExpandedIDs: 60fbffffc637000086380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Player
+        m_OriginalName: Player
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1186
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 7}
       m_SearchString: 
@@ -489,8 +489,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts
+    m_Folders: []
     m_Globs: []
   m_ViewMode: 0
   m_StartGridSize: 64
@@ -534,15 +533,15 @@ MonoBehaviour:
     m_ExpandedIDs: ffffffff00000000923900009439000096390000983900009a3900009c390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: DllManager
-      m_OriginalName: DllManager
+      m_Name: SecondWall
+      m_OriginalName: SecondWall
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 12904
+      m_UserData: 21154
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -623,9 +622,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.3425336, y: 0.52470016, z: 29.40112}
+    m_Target: {x: -0.32461196, y: 4.228962, z: -1.9648418}
     speed: 2
-    m_Value: {x: 3.3425336, y: 0.52470016, z: 29.40112}
+    m_Value: {x: -0.32461196, y: 4.228962, z: -1.9648418}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -672,13 +671,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.21468711, y: 0.11103795, z: -0.024682319, w: 0.97008085}
+    m_Target: {x: 0.20142971, y: -0.004438744, z: 0.00080694695, w: 0.97953635}
     speed: 2
-    m_Value: {x: 0.21467787, y: 0.11103317, z: -0.024681257, w: 0.9700391}
+    m_Value: {x: 0.20142107, y: -0.0044385535, z: 0.0008069123, w: 0.97949433}
   m_Size:
-    m_Target: 16.32625
+    m_Target: 10.683317
     speed: 2
-    m_Value: 16.32625
+    m_Value: 10.683317
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -842,7 +841,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -8432
+  m_LastSelectedObjectID: 14208
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\Scripts\SaveableObject.cs" />
+    <Compile Include="Assets\Scripts\DllManager.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\CommandInvoker.cs" />
     <Compile Include="Assets\Scripts\SaveGameManager.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\ICommand.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\DllManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
