@@ -4209,6 +4209,26 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1685932070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3735666385780783619, guid: 0b0bca8d0f32f2242bee7ce478c5dc60, type: 3}
+  m_PrefabInstance: {fileID: 3735666386616447742}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1685932074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685932070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae89117a28b48647aefe90ae1ec641c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: []
+  objectBeingPooled: {fileID: 3159176797010208867, guid: bf1e90534ee90d34ba655563269e30e2, type: 3}
+  poolTotal: 4
 --- !u!1 &1688020922
 GameObject:
   m_ObjectHideFlags: 0

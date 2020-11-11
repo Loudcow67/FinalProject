@@ -32,8 +32,11 @@ public class CommandInvoker : MonoBehaviour
                 commandHis.RemoveAt(counter);
             }
         }
+        if (commandHis.Count < 4)
+        {
+            commandBuff.Enqueue(command);
+        }
 
-        commandBuff.Enqueue(command);
     }
 
     // Update is called once per frame
@@ -50,27 +53,26 @@ public class CommandInvoker : MonoBehaviour
             Debug.Log("Length: " + commandHis.Count);
             blockCounter.text = "x" + (cubeCounter).ToString();
         }
-        else
+        if (Input.GetKeyDown(KeyCode.Z))
         {
-            if (Input.GetKeyDown(KeyCode.Z))
+            if (counter > 0)
             {
-                if (counter > 0)
-                {
-                    counter--;
-                    cubeCounter++;
-                    commandHis[counter].Undo();
-                    toggle1.GetComponent<Toggle>().isOn = true;
-                    blockCounter.text = "x" + (cubeCounter).ToString();
-                }
+                counter--;
+                cubeCounter++;
+                commandHis[counter].Undo();
+                toggle1.GetComponent<Toggle>().isOn = true;
+                blockCounter.text = "x" + (cubeCounter).ToString();
             }
-            else if (Input.GetKeyDown(KeyCode.R))
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (counter < commandHis.Count)
             {
-                if (counter < commandHis.Count)
-                {
-                    commandHis[counter].Execute();
-                    counter++;
-                    toggle2.GetComponent<Toggle>().isOn = true;
-                }
+                commandHis[counter].Execute();
+                counter++;
+                cubeCounter--;
+                toggle2.GetComponent<Toggle>().isOn = true;
+                blockCounter.text = "x" + (cubeCounter).ToString();
             }
         }
     }
