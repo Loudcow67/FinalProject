@@ -70,12 +70,7 @@ public class DllManager : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            toggle4.GetComponent<Toggle>().isOn = true;
             counter++;
-            if (counter >= 2)
-            {
-                toggle5.GetComponent<Toggle>().isOn = true;
-            }
             float currentTime = Time.time;
             float checkpointTime = currentTime - lastTime;
             lastTime = currentTime;
@@ -83,6 +78,23 @@ public class DllManager : MonoBehaviour
             SaveTime(checkpointTime);
             Debug.Log(LoadTime(0));
             timerText.text = "Current Time: " + LoadTotalTime().ToString();
+            if (toggle4 != null)
+            {
+                toggle4.GetComponent<Toggle>().isOn = true;
+
+            }
+            else
+            {
+                return;
+            }
+            if (counter >= 2 && toggle5 != null)
+            {
+                toggle5.GetComponent<Toggle>().isOn = true;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 

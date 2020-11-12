@@ -53,7 +53,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            toggle1.GetComponent<Toggle>().isOn = true;
+            if (toggle1 != null)
+            {
+                toggle1.GetComponent<Toggle>().isOn = true;
+            }
+            else
+            {
+                return;
+            }
         }
     }
 }

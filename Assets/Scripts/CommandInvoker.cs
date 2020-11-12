@@ -60,8 +60,15 @@ public class CommandInvoker : MonoBehaviour
                 counter--;
                 cubeCounter++;
                 commandHis[counter].Undo();
-                toggle1.GetComponent<Toggle>().isOn = true;
                 blockCounter.text = "x" + (cubeCounter).ToString();
+                if (toggle1 != null)
+                {
+                    toggle1.GetComponent<Toggle>().isOn = true;
+                }
+                else
+                {
+                    return;
+                }
             }
         }
         else if (Input.GetKeyDown(KeyCode.R))
@@ -71,8 +78,15 @@ public class CommandInvoker : MonoBehaviour
                 commandHis[counter].Execute();
                 counter++;
                 cubeCounter--;
-                toggle2.GetComponent<Toggle>().isOn = true;
                 blockCounter.text = "x" + (cubeCounter).ToString();
+                if (toggle2 != null)
+                {
+                    toggle2.GetComponent<Toggle>().isOn = true;
+                }
+                else
+                {
+                    return;
+                }
             }
         }
     }

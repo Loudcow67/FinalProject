@@ -29,7 +29,15 @@ public class ObjectPlacer : MonoBehaviour
                     ICommand command = new PlaceObjectCommand(HitInfo.point, Cube);
                     CommandInvoker.AddCommand(command);
                     FindObjectOfType<AudioManager>().Play("Place");
-                    toggle.GetComponent<Toggle>().isOn = true;
+                    if (toggle != null)
+                    {
+                        toggle.GetComponent<Toggle>().isOn = true;
+
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
             }
         }
