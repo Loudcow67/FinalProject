@@ -9,6 +9,9 @@ public class LevelChange : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            CommandInvoker.counter = 0;
+            CommandInvoker.cubeCounter = 4;
+            CubePlacer.clearList();
             SceneManager.LoadScene(index);
         }
     }

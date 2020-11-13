@@ -47,4 +47,9 @@ public static class CubePlacer
             }
         }
     }
+
+    public static void clearList()
+    {
+        gameObjects.Clear();
+    }
 }

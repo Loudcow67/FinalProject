@@ -7,13 +7,13 @@ public class CommandInvoker : MonoBehaviour
     static Queue<ICommand> commandBuff;
 
     static List<ICommand> commandHis;
-    static int counter;
+    public static int counter;
 
     GameObject toggle1;
     GameObject toggle2;
 
     public Text blockCounter;
-    static int cubeCounter = 4;
+    public static int cubeCounter = 4;
 
     private void Awake()
     {
@@ -36,7 +36,6 @@ public class CommandInvoker : MonoBehaviour
         {
             commandBuff.Enqueue(command);
         }
-
     }
 
     // Update is called once per frame
