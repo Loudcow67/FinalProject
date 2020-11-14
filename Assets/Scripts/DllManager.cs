@@ -66,6 +66,7 @@ public class DllManager : MonoBehaviour
     }
 
     public Text timerText;
+    public GameObject respawnFloor;
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -78,6 +79,7 @@ public class DllManager : MonoBehaviour
             SaveTime(checkpointTime);
             Debug.Log(LoadTime(0));
             timerText.text = "Current Time: " + LoadTotalTime().ToString();
+            Destroy(respawnFloor);
             if (toggle4 != null)
             {
                 toggle4.GetComponent<Toggle>().isOn = true;
