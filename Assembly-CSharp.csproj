@@ -55,23 +55,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\LevelChange.cs" />
     <Compile Include="Assets\Scripts\ObjectPlacer.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\ObjectPool.cs" />
     <Compile Include="Assets\Scripts\AudioManager.cs" />
-    <Compile Include="Assets\Scripts\SaveableObject.cs" />
     <Compile Include="Assets\Scripts\DllManager.cs" />
     <Compile Include="Assets\Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\CommandInvoker.cs" />
-    <Compile Include="Assets\Scripts\SaveGameManager.cs" />
     <Compile Include="Assets\Scripts\Respawn.cs" />
     <Compile Include="Assets\Scripts\PlaceObjectCommand.cs" />
-    <Compile Include="Assets\Scripts\SpecificObject.cs" />
     <Compile Include="Assets\Scripts\CubePlacer.cs" />
     <Compile Include="Assets\Scripts\Sound.cs" />
     <Compile Include="Assets\Scripts\ICommand.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
-    <Compile Include="Assets\Scripts\LevelChange.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\SkySerie Freebie\Hdri setup.txt" />
